@@ -18,13 +18,11 @@ server is runnig...
 ## Run Client
 
 ```sh
-% go run client/main.go
-reqWords: 
-Please need words 'Pin'!
+% go run client/main.go Pin
+Pon!
 ```
 
 ```sh
-% go run client/main.go Pin
-reqWords: Pin
-Pon!
+% go run client/main.go hoge
+Please need words 'Pin'!
 ```
