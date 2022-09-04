@@ -35,7 +35,7 @@ func NewPinPonServiceClient(cc grpc.ClientConnInterface) PinPonServiceClient {
 
 func (c *pinPonServiceClient) Send(ctx context.Context, in *PinPonRequest, opts ...grpc.CallOption) (*PinPonResponse, error) {
 	out := new(PinPonResponse)
-	err := c.cc.Invoke(ctx, "/chat.PinPonService/send", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/PinPon.PinPonService/send", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -80,7 +80,7 @@ func _PinPonService_Send_Handler(srv interface{}, ctx context.Context, dec func(
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/chat.PinPonService/send",
+		FullMethod: "/PinPon.PinPonService/send",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(PinPonServiceServer).Send(ctx, req.(*PinPonRequest))
@@ -92,7 +92,7 @@ func _PinPonService_Send_Handler(srv interface{}, ctx context.Context, dec func(
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var PinPonService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "chat.PinPonService",
+	ServiceName: "PinPon.PinPonService",
 	HandlerType: (*PinPonServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

@@ -1,9 +1,9 @@
 syntax = "proto3";
 
 // プロトファイルの名前空間を定義
-package chat;
+package PinPon;
 
-// 変換後のgoファイルのパッケージ
+// 変換後のgoファイルを出力するディレクトリかつパッケージ名
 option go_package = "./go-protocol-buffer";
 
 message pinPonRequest {
