@@ -1,6 +1,6 @@
 # hello-grpc-go
 
-gRPC with Go
+Hello World for gRPC with Go
 
 ## Download Packages
 
