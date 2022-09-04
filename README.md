@@ -12,6 +12,7 @@ go mod tidy
 
 ```sh
 go run server/main.go
+server is runnig...
 ```
 
 ## Run Client
