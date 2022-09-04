@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+// プロトファイルの名前空間を定義
+package chat;
+
+// 変換後のgoファイルのパッケージ
+option go_package = "./go-protocol-buffer";
+
+message pinPonRequest {
+    string words = 1;
+};
+
+message pinPonResponse {
+    string words = 1;
+};
+
+service PinPonService {
+    rpc send (pinPonRequest) returns (pinPonResponse);
+}
