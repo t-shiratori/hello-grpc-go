@@ -16,8 +16,6 @@ type server struct {
 
 func (s *server) Send(ctx context.Context, req *go_protocol_buffer.PinPonRequest) (*go_protocol_buffer.PinPonResponse, error) {
 
-	println("req.Words:", req.Words)
-
 	resWords := ""
 
 	if req.Words == "Pin" {

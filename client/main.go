@@ -32,8 +32,6 @@ func callPinPon(client go_protocol_buffer.PinPonServiceClient) {
 		reqWords = os.Args[1]
 	}
 
-	println("reqWords:", reqWords)
-
 	res, err := client.Send(context.Background(), &go_protocol_buffer.PinPonRequest{Words: reqWords})
 
 	if err != nil {
