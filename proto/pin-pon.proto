@@ -7,11 +7,11 @@ package PinPon;
 option go_package = "./go-protocol-buffer";
 
 message pinPonRequest {
-    string words = 1;
+    string words = 1; // 数字はフィールド番号(タグ)
 };
 
 message pinPonResponse {
-    string words = 1;
+    string words = 1; // 数字はフィールド番号(タグ)
 };
 
 service PinPonService {
